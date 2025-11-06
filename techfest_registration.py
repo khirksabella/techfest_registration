@@ -1,6 +1,5 @@
 # Tech Fest Midterm Exam
 # TASK 1
-from enum import unique
 
 print("Welcome to SMIT TechFest!")
 print("Event organized by Khirk of APPDAET BTCS2")
@@ -46,6 +45,20 @@ for i in range(len(participants)):
 
 if not duplicate_found:
     print("No duplicate names.")
+
+# TASK 5
+summary = {}
+for i in participants:
+    track = i["track"]
+    if track in summary:
+        summary[track] = summary[track] + 1
+    else:
+        summary[track] = 1
+
+print("\n")
+print("Participants per track:")
+for track in summary:
+    print(track + ": " + str(summary[track]))
 
 
 
