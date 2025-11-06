@@ -1,5 +1,7 @@
 # Tech Fest Midterm Exam
 # TASK 1
+from enum import unique
+
 print("Welcome to SMIT TechFest!")
 print("Event organized by Khirk of APPDAET BTCS2")
 print("\n")
@@ -20,4 +22,20 @@ print("\n")
 print("Registered Participants:")
 for i in range(len(participants)):
     print(f"{i + 1}. {participants[i]['name']} - {participants[i]['track']}")
+
+# TASK 3
+unique = {i ["track"] for i in participants}
+print("\n")
+print("Tracks Offered: ")
+if len(unique) < 2:
+    print("Not enough variety in tracks.")
+else:
+    print(" ".join(unique))
+
+# TASK 4
+print("\n")
+
+
+
+
 
