@@ -35,6 +35,18 @@ else:
 # TASK 4
 print("\n")
 
+name_checker = set()
+duplicate_found = False
+for i in range(len(participants)):
+    if participants[i]['name'] in name_checker:
+        print("Duplicate name found: " + participants[i]['name'])
+        duplicate_found = True
+    else:
+        name_checker.add(participants[i]['name'])
+
+if not duplicate_found:
+    print("No duplicate names.")
+
 
 
 
